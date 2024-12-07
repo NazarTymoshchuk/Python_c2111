@@ -6,10 +6,11 @@ class Student:
         self.progress = 0
         self.gladness = 50
         self.alive = True
+        self.money = 200
 
     def study(self):
         print("Вчиться")
-        self.gladness -= 5
+        self.gladness -= 8
         self.progress += 10
     
     def sleep(self):
@@ -19,7 +20,7 @@ class Student:
     def chill(self):
         print("релаксує")
         self.gladness += 5
-        self.progress -= 5
+        self.progress -= 7
 
     def is_alive(self):
         if self.progress < -10:
@@ -54,8 +55,7 @@ class Student:
 
 student = Student("John")
 
-student.live(1)  
-student.live(2) 
-student.live(3) 
-student.live(4) 
-student.live(5) 
+for day in range(365):
+    if student.alive == False:
+        break
+    student.live(day)
